@@ -1,0 +1,9 @@
+type Product {
+
+    id: ID,
+    name: String,
+    status: String,
+    prices: Price,
+    stock: Int
+
+}

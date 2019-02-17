@@ -1,0 +1,13 @@
+input PriceInput {
+
+    id: ID,
+    priceRows: [PriceRowInput]
+
+}
+
+input PriceRowInput {
+
+    price: Float,
+    currency: String
+
+}

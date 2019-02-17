@@ -1,0 +1,13 @@
+input StockInput {
+
+    id: ID,
+    warehouses: [WarehouseInput]
+
+}
+
+input WarehouseInput {
+
+    name: String,
+    stockOnHand: Int
+
+}

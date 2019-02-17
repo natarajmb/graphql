@@ -1,0 +1,8 @@
+plugins {
+    id 'org.springframework.boot' apply true
+}
+
+bootJar {
+    mainClassName = "com.natarajmb.rest.RestApplication"
+    archiveName = "${project.name}-app.jar"
+}

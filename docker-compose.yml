@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  graphql:
+    image: graphql-service
+    build: graphql-service/.
+    ports:
+      - "0.0.0.0:2020:2020"
+    links:
+      - rest
+    environment:
+      - SERVICE_HOST=rest_1
+  rest:
+    image: rest-service
+    build: rest-service/.
+    ports:
+      - "0.0.0.0:8080:8080"

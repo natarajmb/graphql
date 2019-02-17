@@ -1,0 +1,14 @@
+type Stock {
+
+    id: ID,
+    warehouses: [Warehouse],
+    totalStock : Int
+
+}
+
+type Warehouse {
+
+    name: String,
+    stockOnHand: Int
+
+}

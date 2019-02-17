@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: graphql-service
+
+#graphql:
+#  servlet:
+#    mapping: /graphql
+#    enabled: true
+#    corsEnabled: true
+#    # if you want to @ExceptionHandler annotation for custom GraphQLErrors
+#    exception-handlers-enabled: true
+
+graphiql:
+  mapping: /graphiql
+  pageTitle: GraphQL Demo
+
+server:
+  port: 2020
+

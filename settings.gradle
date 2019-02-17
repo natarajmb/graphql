@@ -1,0 +1,4 @@
+rootProject.name = 'graphql'
+include 'graphql-service'
+include 'rest-service'
+

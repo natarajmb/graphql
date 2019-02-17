@@ -1,0 +1,46 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.0.RELEASE'
+        dockerComposePluginVersion ='0.8.14'
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("com.avast.gradle:gradle-docker-compose-plugin:${dockerComposePluginVersion}")
+    }
+}
+
+apply plugin: 'docker-compose'
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-actuator'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+
+}
+
+dockerCompose {
+    useComposeFiles = ['docker-compose.yml']
+    stopContainers = true
+    removeImages = "All"
+    
+    
+}

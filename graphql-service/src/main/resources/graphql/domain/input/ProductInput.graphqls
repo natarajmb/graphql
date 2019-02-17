@@ -1,0 +1,9 @@
+input ProductInput {
+
+    id: ID,
+    name: String,
+    status: String,
+    price: PriceInput,
+    stock: StockInput
+
+}

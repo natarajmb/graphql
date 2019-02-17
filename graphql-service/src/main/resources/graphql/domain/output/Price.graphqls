@@ -1,0 +1,13 @@
+type Price {
+
+    id: ID,
+    priceRows: [PriceRow]
+
+}
+
+type PriceRow {
+
+    price: Float,
+    currency: String
+
+}

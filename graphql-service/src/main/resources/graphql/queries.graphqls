@@ -1,0 +1,6 @@
+type Query {
+
+    products: [Product]
+    product(productId: String): Product
+
+}

@@ -1,0 +1,10 @@
+.idea/
+.gradle/
+build/
+out/
+*.iml
+*.log
+.hprof
+.DS_Store
+graphql.schema.json
+graphql.config.json

@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot' apply true
+}
+
+ext {
+    graphQLVersion = '5.3.1'
+    apacheHttpClient = '4.5.7'
+}
+
+dependencies {
+    compile "org.apache.httpcomponents:httpclient:${apacheHttpClient}"
+    compile "com.graphql-java-kickstart:graphql-spring-boot-starter:${graphQLVersion}"
+    compile "com.graphql-java-kickstart:graphiql-spring-boot-starter:${graphQLVersion}"
+    compile "com.graphql-java-kickstart:voyager-spring-boot-starter:${graphQLVersion}"
+    testCompile "com.graphql-java-kickstart:graphql-spring-boot-starter-test:${graphQLVersion}"
+}
+
+bootJar {
+    mainClassName = "com.natarajmb.graphql.GraphQLApplication"
+    archiveName = "${project.name}-app.jar"
+}

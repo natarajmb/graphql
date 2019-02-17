@@ -1,0 +1,9 @@
+type Mutation {
+
+    updateProduct(productInput : ProductInput): Product
+
+    setProductPrice(priceInput : PriceInput): Price
+
+    setProductStock(stockInput : StockInput): Int
+
+}
